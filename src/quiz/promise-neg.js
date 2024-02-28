@@ -33,6 +33,9 @@ for (let x = 0; x < array2D.length; x++) {
 
 Promise.all(negPromises)
     .then((negs) => {
+        let rows = []
+        negs.forEach(item => {
+            rows.push(item) })
         console.log(`Sum = ${sum}`)
     })
     .catch((error) => console.log(`Error: ${error}`));
